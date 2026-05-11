@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="14dp"
+            android:gravity="center_vertical"
+            android:background="@color/white">
+
+            <TextView android:id="@+id/btnClose"
+                android:text="✕" android:textSize="18sp"
+                android:textColor="@color/text_primary"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+            <TextView android:text="Jual"
+                android:textSize="16sp" android:textStyle="bold"
+                android:textColor="@color/text_primary"
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:gravity="center"/>
+        </LinearLayout>
+
+        <View android:layout_width="match_parent" android:layout_height="8dp" android:background="@color/bg_page"/>
+
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="16dp">
+
+            <!-- Upload foto -->
+            <LinearLayout
+                android:id="@+id/btnUploadFoto"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/bg_upload_box"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginBottom="12dp">
+                <TextView android:text="+" android:textSize="28sp" android:textColor="@color/text_secondary"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:text="Tambah foto" android:textSize="10sp" android:textColor="@color/text_secondary"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <!-- Tips -->
+            <LinearLayout
+                android:id="@+id/layoutTips"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_chip"
+                android:padding="10dp"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp">
+                <TextView android:text="💡" android:textSize="14sp"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"/>
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical">
+                    <TextView android:text="Tips foto produk"
+                        android:textSize="12sp" android:textStyle="bold" android:textColor="@color/text_primary"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:text="Pilih foto utama yang menampilkan barang utuh dengan latar bersih."
+                        android:textSize="11sp" android:textColor="@color/text_secondary"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                </LinearLayout>
+                <TextView android:id="@+id/btnTutupTips" android:text="✕" android:textSize="14sp"
+                    android:textColor="@color/text_secondary"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <View android:layout_width="match_parent" android:layout_height="0.5dp" android:background="@color/border_color" android:layout_marginBottom="12dp"/>
+
+            <TextView android:text="Judul" android:textSize="12sp" android:textColor="@color/text_secondary"
+                android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/etJudul"
+                android:hint="cth. Levi's 578 baggy jeans hitam"
+                android:textSize="13sp" android:background="@null"
+                android:paddingTop="8dp" android:paddingBottom="8dp"
+                android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+            <View android:layout_width="match_parent" android:layout_height="0.5dp" android:background="@color/border_color" android:layout_marginBottom="12dp"/>
+
+            <TextView android:text="Deskripsi" android:textSize="12sp" android:textColor="@color/text_secondary"
+                android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/etDeskripsi"
+                android:hint="cth. Jarang dipakai, size M, bahan katun adem"
+                android:inputType="textMultiLine" android:minLines="3" android:gravity="top"
+                android:textSize="13sp" android:background="@null"
+                android:paddingTop="8dp" android:paddingBottom="8dp"
+                android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+            <View android:layout_width="match_parent" android:layout_height="0.5dp" android:background="@color/border_color" android:layout_marginBottom="4dp"/>
+
+            <LinearLayout android:id="@+id/rowKategori"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center_vertical" android:paddingTop="14dp" android:paddingBottom="14dp">
+                <TextView android:text="Kategori" android:textSize="14sp" android:textColor="@color/text_primary"
+                    android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"/>
+                <TextView android:id="@+id/tvKategoriPilih" android:text="›" android:textSize="14sp"
+                    android:textColor="@color/text_secondary"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <View android:layout_width="match_parent" android:layout_height="0.5dp" android:background="@color/border_color" android:layout_marginBottom="4dp"/>
+
+            <LinearLayout android:id="@+id/rowHarga"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center_vertical" android:paddingTop="14dp" android:paddingBottom="14dp">
+                <TextView android:text="Harga" android:textSize="14sp" android:textColor="@color/text_primary"
+                    android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"/>
+                <TextView android:id="@+id/tvHargaPilih" android:text="›" android:textSize="14sp"
+                    android:textColor="@color/text_secondary"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <View android:layout_width="match_parent" android:layout_height="0.5dp" android:background="@color/border_color" android:layout_marginBottom="16dp"/>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:layout_marginTop="8dp">
+                <Button android:id="@+id/btnSaveDraft"
+                    android:text="Save draft"
+                    android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:layout_marginEnd="8dp"
+                    android:backgroundTint="@color/white"
+                    android:textColor="@color/text_primary"
+                    android:strokeColor="@color/border_color"/>
+                <Button android:id="@+id/btnUpload"
+                    android:text="Upload"
+                    android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/black" android:textColor="@color/white"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
